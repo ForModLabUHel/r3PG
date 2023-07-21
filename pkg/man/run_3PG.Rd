@@ -21,15 +21,15 @@ run_3PG(site, species, climate, soil = NULL, thinning = NULL,
 
 \item{size_dist}{table as described in \code{\link{prepare_input}} containing the information about size distributions. See also \code{\link{prepare_sizeDist}}}
 
+\item{parsQlitter}{table as described in \code{\link{prepare_input}} containing the information about parameters to be modified. See also \code{\link{prepare_parsQlitter}}}
+
+\item{parsQsoc}{table as described in \code{\link{prepare_input}} containing the information about parameters to be modified. See also \code{\link{prepare_parsQsoc}}}
+
 \item{settings}{a list as described in \code{\link{prepare_input}} with settings for the model.}
 
 \item{check_input}{\code{logical} if the input shall be checked for consistency. It will call \code{\link{prepare_input}} function.}
 
 \item{df_out}{\code{logical} if the output shall be long data.frame (TRUE) the 4-dimensional array (FALSE).}
-
-\item{soilLitPars}{table as described in \code{\link{prepare_input}} containing the information about parameters to be modified. See also \code{\link{prepare_parameters}}}
-
-\item{soilSOCPars}{table as described in \code{\link{prepare_input}} containing the information about parameters to be modified. See also \code{\link{prepare_parameters}}}
 }
 \value{
 either a 4-dimentional array or a data.frame, depending on the parameter \code{df_out}. More details on the output is \code{\link{i_output}}

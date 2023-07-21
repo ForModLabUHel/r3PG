@@ -1723,7 +1723,7 @@ contains
 
             transp_veg(:) = days_in_month * conduct_canopy(:) * (e20 * netRad(:) + defTerm(:)) / div(:) / lambda * day_length
             ! in J/m2/s then the "/lambda*h" converts to kg/m2/day and the days in month then coverts this to kg/m2/month
-            ! if( day_length == 0.d0 ) transp_veg(:) = 0.d0
+            if( day_length == 0.d0 ) transp_veg(:) = 0.d0
             where( lai(:) == 0.d0 )
                 transp_veg(:) = 0.d0
             end where
