@@ -1742,7 +1742,13 @@ contains
             div_so = conduct_soil * (1.d0 + e20) + 1.d0
         end if
 
-        netRad_so = (Qa(1) + Qb(1) * (solar_rad * 10.d0 ** 6.d0 / day_length)) * (1.d0 - sum( fi(:) ) )
+        if( day_length == 0.d0 ) then
+			netRad_so = 0.d0
+		else
+			netRad_so = (Qa(1) + Qb(1) * (solar_rad * 10.d0 ** 6.d0 / day_length)) * (1.d0 - sum( fi(:) ) )
+		endif
+		
+        netRad_so = max(netRad_so, 0.d0) ! net radiation can't be negative
         !SolarRad in MJ/m2/day ---> * 10^6 J/m2/day ---> /day_length converts to only daytime period ---> W/m2
 
         evapotra_soil = days_in_month * conduct_soil * (e20 * netRad_so + defTerm_so) / div_so / lambda * day_length
