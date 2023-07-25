@@ -1,3 +1,20 @@
+#' Title
+#'
+#' @param inputs
+#' @param fc
+#' @param beta
+#' @param e0
+#' @param eta_11
+#' @param u0
+#' @param q0
+#' @param delay
+#' @param tmax
+#' @param nSim
+#'
+#' @return
+#' @export
+#'
+#' @examples
 Q_dec<-function(inputs=inputs,
                 fc,
                 beta,
@@ -90,6 +107,21 @@ Q_dec_m<-function(inputs,
 }
 
 
+#' Title
+#'
+#' @param SOC_inputs
+#' @param fc
+#' @param beta
+#' @param e0
+#' @param eta_11
+#' @param u0
+#' @param q0
+#' @param initSoil
+#'
+#' @return
+#' @export
+#'
+#' @examples
 Q_soc<-function(SOC_inputs,
                 fc,
                 beta,
@@ -126,6 +158,21 @@ Q_soc<-function(SOC_inputs,
 
 }
 
+#' Title
+#'
+#' @param SOC_inputs
+#' @param fc
+#' @param beta
+#' @param e0
+#' @param eta_11
+#' @param u0
+#' @param q0
+#' @param initSoil
+#'
+#' @return
+#' @export
+#'
+#' @examples
 Q_soc_m<-function(SOC_inputs,
                   fc,
                   beta,
